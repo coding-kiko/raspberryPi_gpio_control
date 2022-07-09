@@ -9,7 +9,7 @@ import (
 	"github.com/stianeikeland/go-rpio"
 )
 
-const pinNumber = 3
+const pinNumber = 7
 
 func main() {
 
@@ -20,11 +20,11 @@ func main() {
 	defer rpio.Close()
 
 	pin := rpio.Pin(pinNumber)
+	pin.Output()
 
 	mux := http.NewServeMux()
 	mux.Handle("/toggle", http.HandlerFunc(func(_ http.ResponseWriter, _ *http.Request) {
 		log.Println("toggled")
-		pin.Output()
 		pin.Toggle()
 	}))
 	log.Fatalln(http.ListenAndServe("0.0.0.0:8888", mux))
