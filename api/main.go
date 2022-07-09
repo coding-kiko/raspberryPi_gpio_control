@@ -9,7 +9,7 @@ import (
 	"github.com/stianeikeland/go-rpio"
 )
 
-const pinNumber = 1
+const pinNumber = 3
 
 func main() {
 
