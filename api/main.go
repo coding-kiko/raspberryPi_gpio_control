@@ -24,6 +24,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.Handle("/toggle", http.HandlerFunc(func(_ http.ResponseWriter, _ *http.Request) {
 		log.Println("toggled")
+		pin.Output()
 		pin.Toggle()
 	}))
 	log.Fatalln(http.ListenAndServe("0.0.0.0:8888", mux))
