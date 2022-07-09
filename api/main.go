@@ -26,7 +26,7 @@ func main() {
 		log.Println("toggled")
 		pin.Toggle()
 	}))
-	log.Fatalln(http.ListenAndServe("0.0.0.0:8000", mux))
+	log.Fatalln(http.ListenAndServe("0.0.0.0:8888", mux))
 }
 
 /* func TogglePin(pin rpio.Pin) http.Handler {

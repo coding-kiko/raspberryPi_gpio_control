@@ -2,6 +2,7 @@ version: '3'
 
 services:
   gpio_toggle_api:
+    container_name: gpio_toggle
     build: .
     ports:
       - 8888:8000
