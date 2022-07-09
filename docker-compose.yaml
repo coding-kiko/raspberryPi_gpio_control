@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  gpio_toggle_api:
+    ports:
+      - 80000:8000
+    volumes:
+      - /dev/mem:/dev/mem
