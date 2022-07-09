@@ -11,6 +11,6 @@ EXPOSE 8000
 
 COPY . .
 
-RUN ["go", "build", "main.go"]
+RUN ["go", "build", "api/main.go"]
 
 CMD ["./main"]
