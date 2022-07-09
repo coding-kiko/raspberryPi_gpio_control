@@ -4,6 +4,6 @@ services:
   gpio_toggle_api:
     build: .
     ports:
-      - 80000:8000
+      - 8888:8000
     volumes:
       - /dev/mem:/dev/mem
